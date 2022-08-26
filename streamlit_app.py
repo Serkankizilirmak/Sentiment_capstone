@@ -11,6 +11,7 @@ import numpy as np
 
 import pickle
 
+pip install nltk
 import nltk
 nltk.download('wordnet')
 
