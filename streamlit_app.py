@@ -22,9 +22,9 @@ from keras.preprocessing import sequence
 
 # ===============================================================================================#
 
-word_index_dict = pickle.load(open(r'C:\Users\lenovo\PycharmProjects\pythonProject2\Data\Neural_Networks\Models\word_index_dict.pkl', 'rb'))
+word_index_dict = pickle.load(open(r'Data/Neural_Networks/Models/word_index_dict.pkl', 'rb'))
 
-neural_net_model = load_model(r'C:\Users\lenovo\PycharmProjects\pythonProject2\Data\Neural_Networks/Models/Neural_Network.h5')
+neural_net_model = load_model(r'Data/Neural_Networks/Models/Neural_Network.h5')
 
 tokenizer = RegexpTokenizer(r'[a-zA-Z]+')
 
