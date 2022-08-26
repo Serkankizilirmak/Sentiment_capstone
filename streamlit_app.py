@@ -73,19 +73,14 @@ review_summary_text = sl.text_input('Enter Your Review Summary Here')
 review_text = sl.text_area('Enter Your Review Here')
 
 if sl.button('Predict'):
-    result_review_sum = review_summary_text.title()
 
     result_review = review_text.title()
-
-    review_summary_text = add_sum_suffix(review_summary_text)
 
     review_text = text_cleanup(review_text)
 
     review_text = index_review_words(review_text)
 
-    review_summary_text = index_review_words(review_summary_text)
-
-    all_review_text = review_text + review_summary_text
+    all_review_text = review_text
 
     all_review_text = sequence.pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
                                              maxlen=250)
