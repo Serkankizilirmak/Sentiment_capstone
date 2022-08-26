@@ -1,3 +1,3 @@
 # Sentiment_capstone
 
-https://serkankizilirmak-sentiment-capstone-streamlit-app-c2103k.streamlitapp.com/
+https://serkankizilirmak-sentiment-capstone-streamlit-app-mxjgm3.streamlitapp.com/
