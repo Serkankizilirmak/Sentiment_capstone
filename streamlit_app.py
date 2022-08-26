@@ -24,7 +24,7 @@ from keras.preprocessing import sequence
 
 word_index_dict = pickle.load(open('Data/word_index_dict.pkl', 'rb'))
 
-neural_net_model = load_model('Models/Neural_Network.h5')
+neural_net_model = load_model('C:\Users\lenovo\PycharmProjects\pythonProject2\Data\Neural_Networks/Models/Neural_Network.h5')
 
 tokenizer = RegexpTokenizer(r'[a-zA-Z]+')
 
