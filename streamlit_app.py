@@ -13,7 +13,7 @@ import numpy as np
 import pickle
 
 from nltk.tokenize import RegexpTokenizer
-
+from keras.utils import pad_sequences
 from tensorflow.keras.models import load_model
 from keras.preprocessing import sequence
 
@@ -81,7 +81,7 @@ if sl.button('Predict'):
 
     all_review_text = review_text
 
-    all_review_text = sequence.pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
+    all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
                                              maxlen=250)
 
     prediction = neural_net_model.predict(all_review_text)
