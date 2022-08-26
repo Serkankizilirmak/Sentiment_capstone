@@ -71,7 +71,7 @@ sl.title("Hotel Yorumları Sınıflandırıcı Uygulaması")
 
 review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN) ')
 
-if sl.button('Predict'):
+if sl.button('Tahminle'):
 
     result_review = review_text.title()
 
