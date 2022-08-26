@@ -10,10 +10,11 @@ import pandas as pd
 import numpy as np
 
 import pickle
+sudo pip install -U nltk
+nltk.download('stopwords')
 
-import re
-from nltk.tokenize.api import TokenizerI
-from nltk.tokenize.util import regexp_span_tokenize
+from nltk.tokenize import RegexpTokenizer
+
 
 from tensorflow.keras.models import load_model
 from keras.preprocessing import sequence
