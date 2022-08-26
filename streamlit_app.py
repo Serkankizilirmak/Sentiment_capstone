@@ -5,7 +5,8 @@
 # ===============================================================================================#
 
 import streamlit as sl
-
+import tensorflow
+import nltk
 import pandas as pd
 import numpy as np
 
