@@ -69,7 +69,6 @@ def text_cleanup(text):
 
 sl.title("Hotel Review Classifier Application")
 
-review_summary_text = sl.text_input('Enter Your Review Summary Here')
 review_text = sl.text_area('Enter Your Review Here')
 
 if sl.button('Predict'):
