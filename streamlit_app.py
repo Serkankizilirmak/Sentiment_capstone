@@ -12,6 +12,7 @@ import numpy as np
 
 import pickle
 
+from nltk.tokenize import RegexpTokenizer
 
 from tensorflow.keras.models import load_model
 from keras.preprocessing import sequence
