@@ -82,7 +82,7 @@ if sl.button('Tahminle'):
     all_review_text = review_text
 
     all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
-                                             maxlen=250)
+                                             maxlen=1000)
 
     prediction = neural_net_model.predict(all_review_text)
 
