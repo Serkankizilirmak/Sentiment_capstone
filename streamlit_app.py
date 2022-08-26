@@ -11,7 +11,9 @@ import numpy as np
 
 import pickle
 
-from nltk.tokenize import RegexpTokenizer
+import re
+from nltk.tokenize.api import TokenizerI
+from nltk.tokenize.util import regexp_span_tokenize
 
 from tensorflow.keras.models import load_model
 from keras.preprocessing import sequence
