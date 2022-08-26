@@ -67,7 +67,7 @@ def text_cleanup(text):
 
 # ===============================================================================================#
 
-sl.title("Hotel Yorumları Sınıflandırıcı Uygulaması")
+sl.title("Hotel Yorumları Sınıflandırıcı")
 
 review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN) ')
 
