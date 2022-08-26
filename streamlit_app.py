@@ -10,7 +10,8 @@ import pandas as pd
 import numpy as np
 
 import pickle
-
+python3 -m pip install nltk
+nltk.download()
 from nltk.tokenize import RegexpTokenizer
 
 from tensorflow.keras.models import load_model
@@ -22,9 +23,9 @@ from keras.preprocessing import sequence
 
 # ===============================================================================================#
 
-word_index_dict = pickle.load(open('Data/word_index_dict.pkl', 'rb'))
+word_index_dict = pickle.load(open(r'C:\Users\lenovo\PycharmProjects\pythonProject2\Data\Neural_Networks\Models\word_index_dict.pkl', 'rb'))
 
-neural_net_model = load_model('C:\Users\lenovo\PycharmProjects\pythonProject2\Data\Neural_Networks/Models/Neural_Network.h5')
+neural_net_model = load_model(r'C:\Users\lenovo\PycharmProjects\pythonProject2\Data\Neural_Networks/Models/Neural_Network.h5')
 
 tokenizer = RegexpTokenizer(r'[a-zA-Z]+')
 
