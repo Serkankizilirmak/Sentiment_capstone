@@ -11,12 +11,6 @@ import numpy as np
 
 import pickle
 
-pip install nltk
-import nltk
-nltk.download('wordnet')
-
-from nltk.tokenize import RegexpTokenizer
-
 
 from tensorflow.keras.models import load_model
 from keras.preprocessing import sequence
