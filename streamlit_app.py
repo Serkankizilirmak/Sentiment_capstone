@@ -11,7 +11,8 @@ import numpy as np
 
 import pickle
 
-nltk.download('stopwords')
+import nltk
+nltk.download('wordnet')
 
 from nltk.tokenize import RegexpTokenizer
 
