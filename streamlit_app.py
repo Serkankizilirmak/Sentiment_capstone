@@ -67,9 +67,9 @@ def text_cleanup(text):
 
 # ===============================================================================================#
 
-sl.title("Hotel Review Classifier Application")
+sl.title("Hotel Yorumları Sınıflandırıcı Uygulaması")
 
-review_text = sl.text_area('Enter Your Review Here')
+review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN) ')
 
 if sl.button('Predict'):
 
