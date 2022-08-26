@@ -10,8 +10,7 @@ import pandas as pd
 import numpy as np
 
 import pickle
-python3 -m pip install nltk
-nltk.download()
+
 from nltk.tokenize import RegexpTokenizer
 
 from tensorflow.keras.models import load_model
