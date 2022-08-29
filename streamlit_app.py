@@ -68,24 +68,12 @@ def text_cleanup(text):
 # ===============================================================================================#
 
 
+sl.title("Otel Yorumları Sınıflandırıcı")
+
+review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
 
-
-
-
-def main():
-    menu = ["Number", "Tahminleme"]
-    choice = sl.sidebar.selectbox("Number", menu)
-    number = sl.number_input('Please Insert a Padding Number')
-    sl.write('The current number is ', number)
-    sl.title("Otel Yorumları Sınıflandırıcı")
-    review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
-
-    with sl.form(key='emotion_clf_form'):
-        raw_text = sl.text_area("Type Here")
-        submit_text = sl.form_submit_button(label='Submit')
-
-    if submit_text:
+    if sl.button('Tahminle'):
         col1, col2 = sl.columns(2)
 
         result_review = review_text.title()
@@ -97,7 +85,7 @@ def main():
         all_review_text = review_text
 
         all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
-                                             maxlen=number)
+                                             maxlen=200)
 
         prediction = neural_net_model.predict(all_review_text)
 
