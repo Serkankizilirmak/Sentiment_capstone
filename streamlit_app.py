@@ -88,7 +88,7 @@ if sl.button('Tahminle'):
 
     prediction = neural_net_model.predict(all_review_text)
 
-    proba_df = pd.Series(prediction, columns=['1', '2', '3', '4', '5'])
+    proba_df = pd.Series(prediction)
 
     prediction_num = np.argmax(prediction)
 
