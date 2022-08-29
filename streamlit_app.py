@@ -106,6 +106,7 @@ if sl.button('Tahminle'):
         sl.write(proba_df.iloc[:,2])
         sl.write(proba_df.iloc[:,3])
         sl.write(proba_df.iloc[:,4])
+        sl.write(proba_df.sort_values())
 
 
 
