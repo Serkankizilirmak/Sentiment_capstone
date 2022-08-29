@@ -73,6 +73,10 @@ review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
 
 if sl.button('Tahminle'):
+
+    number = st.number_input('Insert a number')
+    sl.write('The current number is ', number)
+
     col1, col2 = sl.columns(2)
 
     result_review = review_text.title()
@@ -84,7 +88,7 @@ if sl.button('Tahminle'):
     all_review_text = review_text
 
     all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
-                                             maxlen=200)
+                                             maxlen=number)
 
     prediction = neural_net_model.predict(all_review_text)
 
@@ -106,7 +110,6 @@ if sl.button('Tahminle'):
         sl.write(proba_df.iloc[:,2])
         sl.write(proba_df.iloc[:,3])
         sl.write(proba_df.iloc[:,4])
-        sl.write(proba_df.sort_values())
 
 
 
