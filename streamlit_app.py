@@ -105,7 +105,5 @@ if sl.button('Tahminle'):
 
         sl.success('Prediction Probability Hist')
 
-        hist = proba_df.hist()
-        sl.write(hist)
 
 
