@@ -25,7 +25,7 @@ from keras.preprocessing import sequence
 
 word_index_dict = pickle.load(open(r'Data/Neural_Networks/Models/word_index_dict.pkl', 'rb'))
 
-neural_net_model = load_model(r'Data/Neural_Networks/Models/Neural_Network.h5')
+neural_net_model = load_model(r'Data/Neural_Networks/Models/Neural_Network.h5py')
 
 tokenizer = RegexpTokenizer(r'[a-zA-Z]+')
 
@@ -82,7 +82,7 @@ if sl.button('Tahminle'):
     all_review_text = review_text
 
     all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
-                                             maxlen=1000)
+                                             maxlen=200)
 
     prediction = neural_net_model.predict(all_review_text)
 
