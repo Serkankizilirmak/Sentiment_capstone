@@ -9,7 +9,7 @@ import tensorflow
 import nltk
 import pandas as pd
 import numpy as np
-
+import altair as al
 import pickle
 
 from nltk.tokenize import RegexpTokenizer
