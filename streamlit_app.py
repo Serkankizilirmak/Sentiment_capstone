@@ -72,7 +72,7 @@ sl.title("Otel Yorumları Sınıflandırıcı")
 review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
 if sl.button('Tahminle'):
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = sl.beta_columns(2)
 
     result_review = review_text.title()
 
