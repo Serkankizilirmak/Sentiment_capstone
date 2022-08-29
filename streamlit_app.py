@@ -90,6 +90,8 @@ if sl.button('Tahminle'):
 
     prediction_num = np.argmax(prediction)
 
+    prediction = round(prediction)
+
     with col1:
         sl.success("Prediction")
         sl.success(prediction_num + 1)
