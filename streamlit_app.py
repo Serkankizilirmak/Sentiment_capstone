@@ -89,12 +89,13 @@ if sl.button('Tahminle'):
     prediction = neural_net_model.predict(all_review_text)
 
     prediction_num = np.argmax(prediction)
+    prediction_num_second = np.argsort(prediction)[-2]
 
 
     with col1:
         sl.success("Prediction")
         sl.success(prediction_num + 1)
-
+        sl.success(prediction_num_second +1 )
         sl.write("Text Padding")
         sl.write(all_review_text)
 
