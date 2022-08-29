@@ -66,9 +66,9 @@ def give_largest(col, n):
 
     data = [x for x in largest]
 
-    index = [f'{i}_largest' for i in range(1, len(largest) + 1)]
+    columns = [f'{i}_largest' for i in range(1, len(largest) + 1)]
 
-    return pd.DataFrame(data, index=index)
+    return pd.Series(data, index=index)
 
 def n_largest(df, axis, n):
 
