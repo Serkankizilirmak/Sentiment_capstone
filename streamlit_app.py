@@ -77,6 +77,7 @@ if sl.button('Tahminle'):
     number = st.number_input('Insert a number')
     sl.write('The current number is ', number)
 
+if sl.button('Tahminle'):
     col1, col2 = sl.columns(2)
 
     result_review = review_text.title()
@@ -88,7 +89,7 @@ if sl.button('Tahminle'):
     all_review_text = review_text
 
     all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
-                                             maxlen=number)
+                                             maxlen=200)
 
     prediction = neural_net_model.predict(all_review_text)
 
