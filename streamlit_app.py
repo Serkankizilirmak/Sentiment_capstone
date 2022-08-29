@@ -99,8 +99,12 @@ if sl.button('Tahminle'):
         sl.write(all_review_text)
 
     with col2:
+        proba_df = pd.DataFrame(prediction, columns=['1', '2', '3', '4', '5'])
         sl.success("Prediction Probability")
-        proba_df = pd.DataFrame(prediction, columns=['1','2','3','4','5'])
+        col2.subheader('Getting 1')
+        sl.write(proba_df[1])
+        col2.subheader('Getting 2')
+        sl.write(proba_df[2])
         sl.write(proba_df)
 
         sl.success('Prediction Probability Histogram')
