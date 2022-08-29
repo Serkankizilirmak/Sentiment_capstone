@@ -67,9 +67,9 @@ def text_cleanup(text):
 
 # ===============================================================================================#
 
-sl.title("Hotel Yorumları Sınıflandırıcı")
+sl.title("Otel Yorumları Sınıflandırıcı")
 
-review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN) ')
+review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
 if sl.button('Tahminle'):
 
@@ -86,6 +86,4 @@ if sl.button('Tahminle'):
 
     prediction = neural_net_model.predict(all_review_text)
 
-    prediction = np.argmax(prediction)
-
-    sl.success(prediction + 1)
+    sl.success(prediction)
