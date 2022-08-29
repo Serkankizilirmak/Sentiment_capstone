@@ -59,21 +59,6 @@ def text_cleanup(text):
         new_text += word + ' '
 
     return new_text
-##
-def give_largest(col, n):
-
-    largest = col.nlargest(n).reset_index(drop=True)
-
-    data = [x for x in largest]
-
-    index = [f'{i}_largest' for i in range(1, len(largest) + 1)]
-
-    return pd.DataFrame(data, columns=index)
-
-def n_largest(df, axis, n):
-
-    return df.apply(give_largest, axis=axis, n=n)
-##
 
 
 # ===============================================================================================#
@@ -110,20 +95,17 @@ if sl.button('Tahminle'):
     with col1:
 
         sl.success("Prediction")
-        a = n_largest(proba_df,axis=1, n=2)
-        sl.success(a)
         sl.success(prediction_num + 1)
         sl.write("Text Padding")
         sl.write(all_review_text)
 
     with col2:
-
         sl.success("Prediction Probability")
-        sl.write(proba_df.iloc[:,0])
-        sl.write(proba_df.iloc[:,1])
-        sl.write(proba_df.iloc[:, 2])
-        sl.write(proba_df.iloc[:, 3])
-        sl.write(proba_df.iloc[:, 4])
+        sl.write(proba_df.iloc[:,0]),
+        sl.write(proba_df.iloc[:,1]),
+        sl.write(proba_df.iloc[:,2]),
+        sl.write(proba_df.iloc[:,3]),
+        sl.write(proba_df.iloc[:,4])
 
 
 
