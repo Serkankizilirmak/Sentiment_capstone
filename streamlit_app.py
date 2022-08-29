@@ -97,7 +97,7 @@ if sl.button('Tahminle'):
 
         sl.success("Prediction")
         sl.success(prediction_num + 1)
-        sl.success(prediction_num_sort[-2])
+        sl.success(prediction_num_sort)
         sl.write("Text Padding")
         sl.write(all_review_text)
 
