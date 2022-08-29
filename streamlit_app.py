@@ -91,7 +91,7 @@ if sl.button('Tahminle'):
     proba_df = pd.DataFrame(prediction,columns=['1', '2', '3', '4', '5'])
 
     prediction_num = np.argmax(prediction)
-    prediction_num_sort = prediction_num.sort()
+    prediction_num_sort = prediction.sort()
 
     with col1:
 
