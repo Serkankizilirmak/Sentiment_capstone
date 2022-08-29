@@ -95,7 +95,7 @@ if sl.button('Tahminle'):
         sl.success("Prediction")
         sl.success(prediction_num + 1)
 
-        sl.success("Padding Text")
+        sl.write("Text Padding")
         sl.write(all_review_text)
 
     with col2:
@@ -107,6 +107,5 @@ if sl.button('Tahminle'):
         sl.write(proba_df.iloc[:, 3])
         sl.write(proba_df.iloc[:, 4])
 
-        sl.success('Prediction Probability Histogram')
 
 
