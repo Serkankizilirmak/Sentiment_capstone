@@ -102,7 +102,7 @@ if sl.button('Tahminle'):
         proba_df = pd.DataFrame(prediction, columns=['1', '2', '3', '4', '5'])
         sl.success("Prediction Probability")
         col2.subheader('Getting 1')
-        sl.write(proba_df[:1])
+        sl.write(proba_df[1:])
         col2.subheader('Getting 2')
         sl.write(proba_df)
 
