@@ -9,7 +9,7 @@ import tensorflow
 import nltk
 import pandas as pd
 import numpy as np
-import altair as al
+import altair as alt
 import pickle
 
 from nltk.tokenize import RegexpTokenizer
@@ -96,7 +96,7 @@ if sl.button('Tahminle'):
     with col2:
         sl.success("Prediction Probability")
         proba_df = pd.DataFrame(prediction)
-        fig = sl.bar_chart(proba_df).mark_bar().encode(x='rating', y='probability')
+        fig = alt.Chart(proba_df).mark_bar().encode(x='emotions',y='probability')
         sl.altair_chart(fig, use_container_width=True)
 
 
