@@ -77,7 +77,7 @@ if sl.button('Numara Seç'):
     sl.write('The current number is', number)
 
 
-else sl.button('Tahminle'):
+    else sl.button('Tahminle'):
     col1, col2 = sl.columns(2)
 
     result_review = review_text.title()
