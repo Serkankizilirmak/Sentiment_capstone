@@ -100,9 +100,9 @@ if sl.button('Tahminle'):
 
     with col2:
         sl.success("Prediction Probability")
-        proba_df = pd.DataFrame(prediction)
-        sl.write(proba_df.round(15))
+        proba_df = pd.DataFrame(prediction, columns=['1','2','3','4','5'])
+        sl.write(proba_df)
 
-        sl.success('Prediction Probability Hist')
+        sl.success('Prediction Probability Histogram')
 
 
