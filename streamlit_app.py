@@ -74,7 +74,7 @@ review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
 if sl.button('Tahminle'):
 
-    number = st.number_input('Insert a number')
+    number = sl.number_input('Insert a number')
     sl.write('The current number is ', number)
 
 if sl.button('Tahminle'):
