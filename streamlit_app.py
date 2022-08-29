@@ -96,7 +96,7 @@ if sl.button('Tahminle'):
     with col2:
         sl.success("Prediction Probability")
         proba_df = pd.DataFrame(prediction)
-        fig = alt.Chart(proba_df).mark_bar().encode(x='rating', y='probability')
+        fig = sl.bar_chart(proba_df).mark_bar().encode(x='rating', y='probability')
         sl.altair_chart(fig, use_container_width=True)
 
 
