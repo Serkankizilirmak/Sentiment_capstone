@@ -61,6 +61,20 @@ def text_cleanup(text):
     return new_text
 
 
+def findLargest(arr):
+    secondLargest = 0
+    largest = min(arr)
+
+    for i in range(len(arr)):
+        if arr[i] > largest:
+            secondLargest = largest
+            largest = arr[i]
+        else:
+            secondLargest = max(secondLargest, arr[i])
+
+    # Returning second largest element
+    return secondLargest
+
 # ===============================================================================================#
 
 # Streamlit
@@ -97,7 +111,7 @@ if sl.button('Tahminle'):
 
         sl.success("Prediction")
         sl.success(prediction_num + 1)
-        sl.success(prediction)
+        sl.success(findLargest(prediction))
         sl.write("Text Padding")
         sl.write(all_review_text)
 
