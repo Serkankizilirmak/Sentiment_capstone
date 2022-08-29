@@ -73,40 +73,40 @@ sl.title("Otel Yorumları Sınıflandırıcı")
 review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
 
-    if sl.button('Tahminle'):
-        col1, col2 = sl.columns(2)
+if sl.button('Tahminle'):
+    col1, col2 = sl.columns(2)
 
-        result_review = review_text.title()
+    result_review = review_text.title()
 
-        review_text = text_cleanup(review_text)
+    review_text = text_cleanup(review_text)
 
-        review_text = index_review_words(review_text)
+    review_text = index_review_words(review_text)
 
-        all_review_text = review_text
+    all_review_text = review_text
 
-        all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
+    all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
                                              maxlen=200)
 
-        prediction = neural_net_model.predict(all_review_text)
+    prediction = neural_net_model.predict(all_review_text)
 
-        proba_df = pd.DataFrame(prediction,columns=['1', '2', '3', '4', '5'])
+    proba_df = pd.DataFrame(prediction,columns=['1', '2', '3', '4', '5'])
 
-        prediction_num = np.argmax(prediction)
+    prediction_num = np.argmax(prediction)
 
-        with col1:
+    with col1:
 
-            sl.success("Prediction")
-            sl.success(prediction_num + 1)
-            sl.write("Text Padding")
-            sl.write(all_review_text)
+        sl.success("Prediction")
+        sl.success(prediction_num + 1)
+        sl.write("Text Padding")
+        sl.write(all_review_text)
 
-        with col2:
-            sl.success("Prediction Probability")
-            sl.write(proba_df.iloc[:,0])
-            sl.write(proba_df.iloc[:,1])
-            sl.write(proba_df.iloc[:,2])
-            sl.write(proba_df.iloc[:,3])
-            sl.write(proba_df.iloc[:,4])
+    with col2:
+        sl.success("Prediction Probability")
+        sl.write(proba_df.iloc[:,0])
+        sl.write(proba_df.iloc[:,1])
+        sl.write(proba_df.iloc[:,2])
+        sl.write(proba_df.iloc[:,3])
+        sl.write(proba_df.iloc[:,4])
 
 
 
