@@ -104,7 +104,13 @@ if sl.button('Tahminle'):
         col2.subheader('Getting 1')
         sl.write(proba_df.iloc[:,0])
         col2.subheader('Getting 2')
-        sl.write(proba_df)
+        sl.write(proba_df.iloc[:,1])
+        col2.subheader('Getting 3')
+        sl.write(proba_df.iloc[:, 2])
+        col2.subheader('Getting 4')
+        sl.write(proba_df.iloc[:, 3])
+        col2.subheader('Getting 5')
+        sl.write(proba_df.iloc[:, 4])
 
         sl.success('Prediction Probability Histogram')
 
