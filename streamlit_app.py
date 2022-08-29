@@ -68,18 +68,22 @@ def text_cleanup(text):
 # ===============================================================================================#
 
 
-number = sl.number_input('Please Insert a Padding Number')
-sl.write('The current number is ', number)
 
 
 
-submit_text = st.form_submit_button(label='Tahminle')
 
 
 def main():
+    menu = ["Number", "Tahminleme"]
+    choice = sl.sidebar.selectbox("Number", menu)
+    number = sl.number_input('Please Insert a Padding Number')
+    sl.write('The current number is ', number)
     sl.title("Otel Yorumları Sınıflandırıcı")
     review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
+    with sl.form(key='emotion_clf_form'):
+        raw_text = sl.text_area("Type Here")
+        submit_text = sl.form_submit_button(label='Submit')
 
     if submit_text:
         col1, col2 = sl.columns(2)
