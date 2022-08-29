@@ -101,7 +101,7 @@ if sl.button('Tahminle'):
     with col2:
         sl.success("Prediction Probability")
         proba_df = pd.DataFrame(prediction)
-        proba_df = proba_df.round(5)
+        proba_df = proba_df.round(15)
         sl.write(proba_df)
 
         sl.success('Prediction Probability Hist')
