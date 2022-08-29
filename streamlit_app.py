@@ -101,6 +101,6 @@ if sl.button('Tahminle'):
     with col2:
         sl.success("Prediction Probability")
         proba_df = pd.DataFrame(prediction)
-        sl.success(proba_df)
+        sl.write(proba_df)
 
 
