@@ -91,11 +91,13 @@ if sl.button('Tahminle'):
     proba_df = pd.DataFrame(prediction,columns=['1', '2', '3', '4', '5'])
 
     prediction_num = np.argmax(prediction)
+    prediction_num_sort = prediction_num.sort()
 
     with col1:
 
         sl.success("Prediction")
         sl.success(prediction_num + 1)
+        sl.success(prediction_num_sort[-2])
         sl.write("Text Padding")
         sl.write(all_review_text)
 
