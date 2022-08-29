@@ -97,6 +97,7 @@ if sl.button('Tahminle'):
         sl.success("Prediction")
         emoji_icon = emotions_emoji_dict[prediction_num]
         sl.success(prediction_num + 1)
+        sl.write("{}:{}".format(prediction_num, emoji_icon))
 
     with col2:
         sl.success("Prediction Probability")
