@@ -72,6 +72,7 @@ sl.title("Otel Yorumları Sınıflandırıcı")
 review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
 if sl.button('Tahminle'):
+    col1, col2 = st.beta_columns(2)
 
     result_review = review_text.title()
 
@@ -87,8 +88,12 @@ if sl.button('Tahminle'):
     prediction = neural_net_model.predict(all_review_text)
 
     prediction = np.argmax(prediction)
+
     with col1:
         sl.success(prediction + 1)
+
+    with col2:
+        sl.success(prediction)
 
 
 
