@@ -87,5 +87,8 @@ if sl.button('Tahminle'):
     prediction = neural_net_model.predict(all_review_text)
 
     prediction = np.argmax(prediction)
+    with col1:
+        sl.success(prediction + 1)
 
-    sl.success(prediction)
+
+
