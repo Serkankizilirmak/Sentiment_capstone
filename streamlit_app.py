@@ -88,7 +88,7 @@ if sl.button('Tahminle'):
 
     prediction = neural_net_model.predict(all_review_text)
 
-    proba_df = pd.DataFrame(prediction, columns=['1', '2', '3', '4', '5'])
+    proba_df = pd.Series(prediction, columns=['1', '2', '3', '4', '5'])
 
     prediction_num = np.argmax(prediction)
 
@@ -101,10 +101,10 @@ if sl.button('Tahminle'):
 
     with col2:
         sl.success("Prediction Probability")
-        sl.write(proba_df.iloc[:,0]),
-        sl.write(proba_df.iloc[:,1]),
-        sl.write(proba_df.iloc[:,2]),
-        sl.write(proba_df.iloc[:,3]),
+        sl.write(proba_df.iloc[:,0])
+        sl.write(proba_df.iloc[:,1])
+        sl.write(proba_df.iloc[:,2])
+        sl.write(proba_df.iloc[:,3])
         sl.write(proba_df.iloc[:,4])
 
 
