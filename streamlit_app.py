@@ -92,7 +92,6 @@ if sl.button('Tahminle'):
 
     with col1:
         sl.success("Prediction")
-        emoji_icon = emotions_emoji_dict[prediction_num+1]
         sl.success(prediction_num + 1)
 
         sl.success("Padding Text")
