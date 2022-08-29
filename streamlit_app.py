@@ -70,7 +70,7 @@ def text_cleanup(text):
 sl.title("Otel Yorumları Sınıflandırıcı")
 
 review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
-emotions_emoji_dict = {1:"😠",5:"🤗", 4:"😂", 3:"😐",2:"😔"}
+
 
 if sl.button('Tahminle'):
     col1, col2 = sl.columns(2)
@@ -91,17 +91,21 @@ if sl.button('Tahminle'):
     prediction_num = np.argmax(prediction)
 
     with col1:
-        sl.success("Padding Text")
-        sl.write(all_review_text)
-
         sl.success("Prediction")
         emoji_icon = emotions_emoji_dict[prediction_num+1]
         sl.success(prediction_num + 1)
-        sl.write("{}:{}".format(prediction_num, emoji_icon))
+
+        sl.success("Padding Text")
+        sl.write(all_review_text)
 
     with col2:
         sl.success("Prediction Probability")
         proba_df = pd.DataFrame(prediction)
         sl.write(proba_df)
+
+        sl.success('Prediction Probability Hist')
+
+        hist = proba_df.hist()
+        sl.write(hist)
 
 
