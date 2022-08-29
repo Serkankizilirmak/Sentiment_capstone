@@ -73,7 +73,7 @@ review_text = sl.text_area('Lütfen Yorumunuzu Giriniz (EN)')
 
 
 
-number = sl.number_input('Insert a number')
+number = sl.number_input('Please Insert a Padding Number')
 sl.write('The current number is ', number)
 
 if sl.button('Tahminle'):
@@ -88,7 +88,7 @@ if sl.button('Tahminle'):
     all_review_text = review_text
 
     all_review_text = pad_sequences([all_review_text], value=word_index_dict['<PAD>'], padding='post',
-                                             maxlen=200)
+                                             maxlen=number)
 
     prediction = neural_net_model.predict(all_review_text)
 
