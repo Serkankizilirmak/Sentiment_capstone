@@ -1,6 +1,6 @@
 # Sentiment_capstone
 
  
-### ıt is still in the pivot phase but you can still enter your comment and try ### 
+### It is still in the pivot phase but you can try it with a hotel review from tripadvisor.  ### 
 
 https://serkankizilirmak-sentiment-capstone-streamlit-app-mxjgm3.streamlitapp.com/
